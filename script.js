@@ -71,19 +71,22 @@ function reappearFunction() {
     document.getElementById('restartGameBtn').classList.remove('noDisplay')
 }
 
-function highlight(scoreEl){
+function highlight(scoreEl) {
     var orig = scoreEl.style.color;
     scoreEl.style.color = '#f0ac0f';
-    setTimeout(function(){
+    setTimeout(function () {
         scoreEl.style.color = orig;
     }, 400);
- }
+}
 
 var computerScoreEl = document.getElementById('computerScore')
 var userScoreEl = document.getElementById('userScore')
 
 let userScore = 0
 let computerScore = 0
+
+var defeatSound = new Audio('assets/audios/wronganswer-37702.mp3')
+var victorySound = new Audio('assets/audios/correct-choice-43861.mp3')
 
 for (let i = 0; i < gameButtons.length; i++) {
     let button = gameButtons[i]
@@ -95,16 +98,19 @@ for (let i = 0; i < gameButtons.length; i++) {
 
         if (playerSelection.type === computerSelection) {
             console.log('%cdraw huhu', 'color: #4399dd; font-size: 25px')
+
+            highlight(computerScoreEl)
+            highlight(userScoreEl)
+            defeatSound.play()
+
         } else if (playerSelection.losesTo === computerSelection) {
             console.log('%cyou lose 😔', 'color: #e44535; font-size: 25px; font-weight: bold')
 
             highlight(computerScoreEl)
+            defeatSound.play()
 
             computerScore += 1
             computerScoreEl.innerText = computerScore
-
-            var defeatSound = new Audio('assets/audios/wronganswer-37702.mp3');
-            defeatSound.play()
 
         } else {
             console.log('%cyou win! whoop whoop', 'color: #6eb179; font-size: 25px; font-weight: bold')
@@ -113,8 +119,6 @@ for (let i = 0; i < gameButtons.length; i++) {
 
             userScore += 1
             userScoreEl.innerText = userScore
-
-            var victorySound = new Audio('assets/audios/correct-choice-43861.mp3');
             victorySound.play()
         }
 

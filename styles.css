@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Post';
     src: url('assets/fonts/PostRegular.woff2') format('woff2'),
-         url('assets/fonts/PostRegular.woff') format('woff'),
-         url('assets/fonts/Post.otf') format('otf');
+        url('assets/fonts/PostRegular.woff') format('woff'),
+        url('assets/fonts/Post.otf') format('otf');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -64,64 +64,74 @@ body {
     line-height: 1;
 }
 
-body > section {
+body>section {
     height: 50%;
 }
 
-body > section:nth-of-type(1) {
+body>section:nth-of-type(1) {
     background-color: rgb(30, 30, 30);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-body > section:nth-of-type(1) h1 {
+body>section:nth-of-type(1) h1 {
     display: flex;
     justify-content: center;
     font-family: 'Post';
     font-size: 5.5rem;
 }
 
-body > section h1 > span:nth-of-type(1) {
+body>section h1>span:nth-of-type(1) {
     color: #3b64d9;
 }
-body > section h1 > span:nth-of-type(2) {
+
+body>section h1>span:nth-of-type(2) {
     color: #e46892;
 }
-body > section h1 > span:nth-of-type(3) {
+
+body>section h1>span:nth-of-type(3) {
     color: #f0ac0f;
 }
-body > section h1 > span:nth-of-type(4) {
+
+body>section h1>span:nth-of-type(4) {
     color: #e44535;
 }
-body > section h1 > span:nth-of-type(5) {
+
+body>section h1>span:nth-of-type(5) {
     color: #6eb179;
 }
-body > section h1 > span#whitespace {
+
+body>section h1>span#whitespace {
     width: 1rem;
 }
-body > section h1 > span:nth-of-type(7) {
+
+body>section h1>span:nth-of-type(7) {
     color: #4399dd;
 }
-body > section h1 > span:nth-of-type(8) {
+
+body>section h1>span:nth-of-type(8) {
     color: #f06b0b;
 }
-body > section h1 > span:nth-of-type(9) {
+
+body>section h1>span:nth-of-type(9) {
     color: #f0ac0f;
 }
-body > section h1 > span:nth-of-type(10) {
+
+body>section h1>span:nth-of-type(10) {
     color: #3b64d9;
 }
-body > section h1 > span:nth-of-type(11) {
+
+body>section h1>span:nth-of-type(11) {
     color: #e44535;
 }
 
 
-body > div {
+body>div {
     position: absolute;
     left: 50vw;
     top: 50vh;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     display: flex;
     flex-direction: column;
@@ -130,18 +140,18 @@ body > div {
     color: #6eb179;
 }
 
-body > div > div > h2 {
+body>div>div>h2 {
     font-size: 4rem;
 }
 
-body > div > div > h4  {
+body>div>div>h4 {
     font-size: 1.7rem;
     padding: 1.2rem;
 }
 
-body > div > span {
+body>div>span {
     font-size: 1.7rem;
-    
+
 }
 
 body section:nth-of-type(2) main {
@@ -151,38 +161,9 @@ body section:nth-of-type(2) main {
     justify-content: center;
 }
 
-body section:nth-of-type(2) > main > div > img {
+body section:nth-of-type(2)>main>div>img {
     width: 30vw;
     cursor: pointer;
-}
-
-body section:nth-of-type(2) > main > div {
-    position: relative;
-}
-
-body section:nth-of-type(2) > main > div > div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0.8rem;
-    border-radius: 50%;
-    cursor: pointer;
-}
-body section:nth-of-type(2) > main > div:nth-of-type(1) > div {
-    background-color: #4399dd;
-}
-
-body section:nth-of-type(2) > main > div:nth-of-type(2) > div {
-    background-color: #e44535;
-}
-
-body section:nth-of-type(2) > main > div:nth-of-type(3) > div {
-    background-color: #e46892;
-}
-
-body section:nth-of-type(2) > main > div > div > img {
-    width: 8.5vw;
 }
 
 body section:nth-of-type(2) h2 {
@@ -196,15 +177,16 @@ body section:nth-of-type(2) h2 {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-0.4rem);
     }
+
     100% {
         transform: translateY(0);
     }
 
 }
-
 
 footer {
     display: flex;
@@ -229,4 +211,159 @@ footer img {
 footer a:hover {
     transform: rotate(360deg) scale(1.2);
     transition-duration: 0.8s;
+}
+
+
+/*
+! Media Queries
+*/
+
+@media only screen and (max-width: 390px) {
+    body>section:nth-of-type(1) h1 {
+        font-size: 4rem;
+    }
+
+    body section:nth-of-type(2)>main>div>img {
+        width: 24vw;
+    }
+
+    body>div>div>h2 {
+        font-size: 3rem;
+    }
+
+    body>div>div>h4 {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+
+    body>div>span {
+        font-size: 1.5rem;
+
+    }
+}
+
+@media only screen and (min-width: 800px) and (min-height: 800px) {
+    body>section:nth-of-type(1) h1 {
+        font-size: 8.5rem;
+    }
+
+    body section:nth-of-type(2)>main>div>img {
+        width: 25vw;
+    }
+
+    body>div>div>h2 {
+        font-size: 6rem;
+    }
+
+    body>div>div>h4 {
+        font-size: 3.2rem;
+        padding: 1rem;
+    }
+
+    body>div>span {
+        font-size: 3rem;
+
+    }
+
+    body section:nth-of-type(2) h2 {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    footer img {
+        width: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    body>section {
+        height: 100%;
+        width: 50vw;
+    }
+
+    body>section:nth-of-type(1) h1 {
+        font-size: 6.5rem;
+    }
+
+    body section:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body section:nth-of-type(2) main {
+        padding-top: 3rem;
+    }
+
+    body section:nth-of-type(2)>main>div>img {
+        width: 10vw;
+    }
+
+    body>div>div>h2 {
+        font-size: 4rem;
+    }
+
+    body>div>div>h4 {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+
+    body>div>span {
+        font-size: 2.5rem;
+    }
+
+    body section:nth-of-type(2) h2 {
+        font-size: 1rem;
+    }
+
+    body>div {
+        transform: translate(-50%);
+        top: 68vh;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    body>div>div {
+        display: flex;
+        min-width: 5rem;
+    }
+
+    body>div>div:first-of-type {
+        flex-direction: column-reverse;
+    }
+
+    body>div>div:first-of-type h4 {
+        order: 1;
+    }
+
+    body>div>div:last-of-type {
+        flex-direction: column;
+    }
+
+    body>div>div:last-of-type h4 {
+        order: -1;
+    }
+
+    footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    footer img {
+        width: 0.8rem;
+    }
 }
