@@ -34,24 +34,42 @@
 
     <div>
         <div>
+            <h4 class="noDisplay">🪨</h4>
             <h3>Computer</h3>
-            <h2>0</h2>
+            <h2 id="computerScore">0</h2>
         </div>
         <span>X</span>
         <div>
-            <h2>0</h2>
+            <h2 id="userScore">0</h2>
             <h3>You</h3>
+            <h4 class="noDisplay">🪨</h4>
         </div>
     </div>
 
     <section>
         <main>
-            <img id="rock" class="gameButton" src="assets/images/raised-fist_270a.png" alt="Raised fist">
-            <img id="paper" class="gameButton" src="assets/images/hand-with-fingers-splayed_1f590-fe0f.png"
-                alt="Hand with fingers splayed">
-            <img id="scissors" class="gameButton" src="assets/images/victory-hand_270c-fe0f.png" alt="Victory hand">
+            <div>
+                <img id="rock" class="gameButton" src="assets/images/raised-fist_270a.png" alt="Raised fist">
+                <div class="emojiIcons">
+                    <img src="assets/images/rock_1faa8.png" alt="rock emoji">
+                </div>
+            </div>
+            <div>
+                <img id="paper" class="gameButton" src="assets/images/hand-with-fingers-splayed_1f590-fe0f.png"
+                    alt="Hand with fingers splayed">
+                <div class="emojiIcons">
+                    <img src="assets/images/page-facing-up_1f4c4.png" alt="rock emoji">
+                </div>
+            </div>
+            <div>
+                <img id="scissors" class="gameButton" src="assets/images/victory-hand_270c-fe0f.png" alt="Victory hand">
+                <div class="emojiIcons">
+                    <img src="assets/images/scissors_2702-fe0f.png" alt="rock emoji">
+                </div>
+            </div>
         </main>
-        <h2 id="chooseOneSpan" class="noDisplay">Choose one!</h2>
+        <h2 id="chooseOneBtn">Choose one!</h2>
+        <h2 id="restartGameBtn" class="noDisplay"><a href="/">Restart Game?</a></h2>
     </section>
 
     <script src="script.js"></script>
