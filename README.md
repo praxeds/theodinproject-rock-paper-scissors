@@ -36,7 +36,7 @@
 
 ### Built With
 
-![header](assets\images\header.gif)
+![header](assets/images/header.gif)
 
 * [Github Pages](https://pages.github.com/)
 
